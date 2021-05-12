@@ -16,6 +16,7 @@ namespace Camp.ViewModels
             SelectedProcessed = processed;
             SelectedLastName = lastName;
             SelectedPhoneNumber = phoneNumber;
+
         }
     }
 }

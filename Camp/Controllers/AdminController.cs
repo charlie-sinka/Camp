@@ -25,7 +25,7 @@ namespace Camp.Controllers
         [HttpGet]
         public async Task<ActionResult> Index(string lastName, string phoneNumber, bool processed, int page = 1)
         {
-            int pageSize = 2;
+            int pageSize = 5;
             IQueryable<Order> orders = db.Orders.Include(t => t.Tour).Include(v => v.Voucher);
             
             orders = processed ? orders.Where(o => o.Processed == true) : orders.Where(o => o.Processed == false);
