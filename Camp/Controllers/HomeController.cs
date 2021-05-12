@@ -25,5 +25,9 @@ namespace Camp.Controllers
         {
             return View();
         }
+        public IActionResult Gallery()
+        {
+            return View();
+        }
     }
 }

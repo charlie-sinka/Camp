@@ -12,7 +12,11 @@
     <title>@ViewData["Title"] - Camp</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    @await RenderSectionAsync("Stylesheets", required: false)
 </head>
+<style>
+    @await RenderSectionAsync("Styles", required: false)
+</style>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
@@ -25,6 +29,9 @@
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/Home">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="~/Home/Gallery">Галлерея</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="~/Home/Contacts">Контакты</a>
